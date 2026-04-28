@@ -4,33 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akan Name Generator</title>
-    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <!-- logo -->
      <header>
-        <a href="/">
-        <img class="logo" src="" alt="logo" ><img src="" alt="">
         <h1>Akan Namings</h1>
         <p>Get to know your Akan Name today</p>
         <p>Use ourAkan Name Generator find out your Ghanan(Akan) name today</p>
-        </a>
      </header>
 
-     <!-- Navigation bar-->
-      <nav>
-        <a href="#about">About</a>
-        <a href="#form">Form</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <!-- section for the description -->
-       <section class="description">
-        <h2>About the Akan Namings System</h2>
-        <the>
-            Akan naming traditions is a Ghanan naming tradition that involves giving a child (Kradin) a name based on the day of the weekthey are born,
-            which is believed to influence their personality.An "outdooring" ceremony (abadinto)takes place eight days after birth to formally welcome the child into the community and introduce their formal or ancenstral name.Akan eple bellieve the day of birth determines the childs kra(soul) and influences their personality
-        the chid is 
-       </section>
+     <!-- Form section-->
+      <form id="akan-form">
+      
+      <!-- Day -->
+       <label>Day of birth</label>
+       <input type="number" id="month" required>
+
+       <!-- Month -->
+        <label>Month of birth</label>
+        <input type="number" id="month" required>
+
+        <!-- year -->
+         <label>Year of birth</label>
+         <input type="number" id="month" required>
+
+         <!-- Gender -->
+          <label>Gender</label>
+          <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <!-- Button -->
+           <button type="submit">Get Akan name</button>
+
+        </form>
+        <!-- Results -->
+         <div id="result" class="result-box"></div>
+
+         <!-- Javascript link -->
+          <script src="script.js"></script>
     
 </body>
 </html>
