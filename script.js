@@ -30,6 +30,7 @@ document.querySelector("#akan-form").addEventListener("submit", function(addEven
         result.textContent ="month must be between 1 and 12.";
         return;
     }
+     if ()
     //calculate the day of the week using the formula
     //CC is the first two digits, YY is the lasttwo digits
     const CC = Math.floor(year / 100); 
