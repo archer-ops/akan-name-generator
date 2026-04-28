@@ -44,17 +44,17 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
 
     //make sure day is not negative
     if (day < 0) {
-        day = day + 7
+        day = day + 7;
     }
 
     //akanName based on gender
     let akanName = ""
     if (gender === "male") {
-        akanName = maleNames[day]
+        akanName = maleNames[day];
     }else {
-        akanName = femaleNames[day]
+        akanName = femaleNames[day];
     }
     //display the result
-    result.textContent = "day in which you were born" + day + "your akan name" + akanName;
+    result.textContent = "you were born on a" + dayName[day] + "your akan name is: " + akanName;
         
     });
