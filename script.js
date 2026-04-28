@@ -49,11 +49,12 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     //match the calculated day to the corresponding Akan name
     let akanName = ""
     if (gender === "male") {
-        akanName = maleNames[d];
+        akanName = maleNames[day]
     }else {
-        akanName = femaleNam
+        akanName = femaleNames[day]
     }
-
+    //display the result
+    result.textContent = "you were bo
         
     }
 )
