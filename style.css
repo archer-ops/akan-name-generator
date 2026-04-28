@@ -41,8 +41,8 @@ input.select {
 /* button */
 button {
     margin-top: 15px;
-    padding: 12px;
-    background-color: #f0ffff;
+    padding: 10px;
+    background-color:gray;
     color: darkcyan;
     width: 85%;
     border-radius: 5px;
@@ -51,7 +51,7 @@ button {
     cursor: pointer;
 }
 button.hover {
-    background-color: darkturquoise;
+    background-color: black
 }
 
 /* Results */
