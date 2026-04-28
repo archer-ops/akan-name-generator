@@ -46,15 +46,15 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
         day = day + 7
     }
 
-    //match the calculated day to the corresponding Akan name
-    let akanName = ""
+    //akanName based on gender
+    let akanName;
     if (gender === "male") {
         akanName = maleNames[day]
     }else {
         akanName = femaleNames[day]
     }
     //display the result
-    result.textContent = "day you were born" + day + "your akanName" + akanName;
+    result.textContent = "day in which you were born" + day + "your akan name" + akanName;
         
     }
 );
