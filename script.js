@@ -8,25 +8,25 @@ const femaleNames = ["adowa", "abenaa", "akua", "yaa", "afua", "ama", "akosua"]
 const dayNames = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 //form submission
-document.querySelector("#akan-form").addEventListener("submit",function(addEventListener){
+document.querySelector("#akan-form").addEventListener("submit", function(addEventListener){
     // stops page from refreshing
     event.preventDefault();
 
     //get user input
     
-    const day = Number(document.querySelector("#day").value);
+    const d = Number(document.querySelector("#day").value);
     const month = Number(document.querySelector("#month").value);
     const year = Number(document.querySelector("#year").value);
-    const gender = Number(document.querySelector("#gender").value);
+    const gender = document.querySelector("#gender").value;
 
     const result = document.querySelector("#result");
 
     //validate the input
-    if (day < 1 || day > 31) {
+    if (d < 1 || d > 31) {
         result.textContent = "day must be between 1 and 31.";
         return;
     }
-    if (month < 1 || month) {
+    if (month < 1 || month > 12) {
         result.textContent ="month must be between 1 and 12.";
         return;
     }
@@ -39,22 +39,18 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     const CC = Math.floor(year / 100); 
     const YY = Math.floor(year % 100); 
     const MM = month;
-    const DD = day;
-    let d = ( CC * 4 - 2 * CC - 1 +( 26 * (MM + 1) / 100) + DD) % 7;
+    const DD = d;
+    let d = (( CC * 4 )- 2 * CC - 1 +( 26 * (MM + 1) / 10) + DD) % 7;
 
     //make sure day is not negative
-    if (day < 0) {
-        day = day + 7;
+    if (d < 0) {
+        d += 7;
     }
 
     //akanName based on gender
-    let akanName = ""
-    if (gender === "male") {
-        akanName = maleNames[day];
-    }else {
-        akanName = femaleNames[day];
-    }
+    let akanName = gender ==="male" ? maleNames[d] : femaleNames[d]
+    
     //display the result
-    result.textContent = "you were born on a" + dayName[day] + "your akan name is: " + akanName;
+    result.textContent = "you were born on a" + dayName[d] + "your akan name is: " +{ akanName};
         
     });
