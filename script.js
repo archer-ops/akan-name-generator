@@ -1,4 +1,4 @@
-// Ghanan names(akan)
+// akanNamea
 // the end result //Akan names mapped to the formula
 //the results should be:1=monday, 2=tuesday, 3=wednesday, 4=thursday, 5=friday, 6=saturday, 7=sunday
 
@@ -39,4 +39,21 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     const YY = Math.floor(year % 100); 
     const MM = month;
     const DD = day;
+    let d = ( CC * 4 - 2 * CC - 1 +( 26 * (MM + 1) / 100) + DD) % 7;
+
+    //make sure day is not negative
+    if (day < 0) {
+        day = day + 7
+    }
+
+    //match the calculated day to the corresponding Akan name
+    let akanName = ""
+    if (gender === "male") {
+        akanName = maleNames[d];
+    }else {
+        akanName = femaleNam
+    }
+
+        
+    }
 )
