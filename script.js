@@ -54,7 +54,7 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
         akanName = femaleNames[day]
     }
     //display the result
-    result.textContent = "you were bo
+    result.textContent = "day you were born" + day + "your akanName" + akanName;
         
     }
 )
