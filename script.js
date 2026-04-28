@@ -1,6 +1,6 @@
 // akanNamea
 // the end result //Akan names mapped to the formula
-//the results should be:1=monday, 2=tuesday, 3=wednesday, 4=thursday, 5=friday, 6=saturday, 7=sunday
+//the results should be:1=monday, 2=tuesday, 3=wednesday, 4=thursday, 5=friday, 6=saturday, 0=sunday
 
 const maleNames = ["kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame", "kwasi"]
 const femaleNames = ["adowa", "abenaa", "akua", "yaa", "afua", "ama", "akosua"]
@@ -8,13 +8,13 @@ const femaleNames = ["adowa", "abenaa", "akua", "yaa", "afua", "ama", "akosua"]
 const dayNames = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 //form submission
-document.querySelector("#akan-form").addEventListener("submit", function(addEventListener){
+document.querySelector("#akan-form").addEventListener("submit", function(event) {
     // stops page from refreshing
     event.preventDefault();
 
     //get user input
     
-    const d = Number(document.querySelector("#day").value);
+    const day = Number(document.querySelector("#day").value);
     const month = Number(document.querySelector("#month").value);
     const year = Number(document.querySelector("#year").value);
     const gender = document.querySelector("#gender").value;
@@ -22,7 +22,7 @@ document.querySelector("#akan-form").addEventListener("submit", function(addEven
     const result = document.querySelector("#result");
 
     //validate the input
-    if (d < 1 || d > 31) {
+    if (day < 1 || day > 31) {
         result.textContent = "day must be between 1 and 31.";
         return;
     }
@@ -30,7 +30,22 @@ document.querySelector("#akan-form").addEventListener("submit", function(addEven
         result.textContent ="month must be between 1 and 12.";
         return;
     }
-     if ()
+    if (!year || year < 1000) {
+        result.textContent = "Enter a valid year.";
+        return;
+    }
+    if (!gender) {
+        result.textContent = "please select a gender.";
+        return;
+    }
+    // congurence adjustment
+    let m = month;
+    let y = year;
+
+    if (m < 3) {
+        m += 12;
+        y -=1;
+    }
     //calculate the day of the week using the formula
     //CC is the first two digits, YY is the lasttwo digits
     const CC = Math.floor(year / 100); 
