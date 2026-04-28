@@ -13,6 +13,13 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     event.preventDefault();
 
     //get user input
-    const day
+    const day = Number(document.querySelector("#day").value);
+    const day = Number(document.querySelector("#month").value);
+    const day = Number(document.querySelector("#year").value);
+    const day = Number(document.querySelector("#gender").value);
+
+    const result = document.querySelector("#result");
+
+    //validate the 
 }
 )
