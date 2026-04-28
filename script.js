@@ -34,6 +34,9 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
         return;
     }
     //calculate the day of the week using the formula
-    const CC = Math.floor(year / 100); //example 1989 = 19
-    const YY = 
+    //CC is the first two digits, YY is the lasttwo digits
+    const CC = Math.floor(year / 100); 
+    const YY = Math.floor(year % 100); 
+    const MM = month;
+    const DD = day;
 )
