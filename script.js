@@ -57,4 +57,4 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     result.textContent = "day you were born" + day + "your akanName" + akanName;
         
     }
-)
+);
