@@ -14,12 +14,24 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
 
     //get user input
     const day = Number(document.querySelector("#day").value);
-    const day = Number(document.querySelector("#month").value);
-    const day = Number(document.querySelector("#year").value);
-    const day = Number(document.querySelector("#gender").value);
+    const month = Number(document.querySelector("#month").value);
+    const year = Number(document.querySelector("#year").value);
+    const gender = Number(document.querySelector("#gender").value);
 
     const result = document.querySelector("#result");
 
-    //validate the 
+    //validate the input
+    if (day < 1 || day > 31) {
+        result.textContent = "day must be between 1 and 31.";
+        return;
+    }
+    if (month < 1 || month) {
+        result.textContent ="month must be between 1 and 12.";
+        return;
+    }
+    if (gender === "") {
+        result.textContent ="please select gender.";
+        return;
+    }
 }
 )
