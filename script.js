@@ -13,6 +13,7 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     event.preventDefault();
 
     //get user input
+    
     const day = Number(document.querySelector("#day").value);
     const month = Number(document.querySelector("#month").value);
     const year = Number(document.querySelector("#year").value);
@@ -47,7 +48,7 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     }
 
     //akanName based on gender
-    let akanName;
+    let akanName = ""
     if (gender === "male") {
         akanName = maleNames[day]
     }else {
@@ -56,5 +57,4 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
     //display the result
     result.textContent = "day in which you were born" + day + "your akan name" + akanName;
         
-    }
-);
+    });
