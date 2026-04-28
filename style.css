@@ -24,5 +24,22 @@ form {
 label {
     margin-top: 10px;
     text-align: center;
-    
+    font-weight: bolder;
+    display: block;
+}
+/* input and seect */
+input.select {
+    margin-top: 10px;
+    padding: 20px;
+    width: 50%;
+    font-size: 16px;
+    border: 0cap;
+    border-radius: 5px;
+}
+/* button */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #f0ffff;
+    color: blanchedalmond;
 }
