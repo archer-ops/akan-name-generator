@@ -33,5 +33,7 @@ document.querySelector("#akan-form").addEventListener("submit",function(addEvent
         result.textContent ="please select gender.";
         return;
     }
+    //calculate the day of the week using the formula
+    const CC = Math.floor(year / 100);
 }
 )
